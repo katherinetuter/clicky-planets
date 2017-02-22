@@ -1,8 +1,12 @@
 console.log("hello");
 
+//event listeners run on page load so you have to add event listeners
 var planetButton = document.getElementById("showPlanets");
 var planetHolderDiv = document.getElementById("planetHolder");
-planetButton.addEventListener("click", getPlanets);
+planetButton.addEventListener("mouseenter", getPlanets);
+// var planetBoxes = document.getElementByClassName("planetBox");
+document.body.addEventListener("click", showMeTheMoney);
+
 
 var planets = [
 	{
@@ -44,10 +48,19 @@ function getPlanets(){
 	for (var i = 0; i < planets.length; i++){
 		var newPlanet = "";
 		newPlanet += `<div class="planetBox" id="planetBox-${i}">`;
-		newPlanet += `<div class="planetName"> ${planets[i].name}  </div>`;
+		newPlanet += `<div class="planetName hidden"> ${planets[i].name}  </div>`;
 		newPlanet+= `<img class="planetImage" src="${planets[i].url}">`;
 		newPlanet += `</div>`;
 		planetHolderDiv.innerHTML += newPlanet;
+	}
+}
+
+function showMeTheMoney(event){
+	if(event.target.className === "planetImage"){
+	console.log("event worked", event);
+	//console.log("unique ID", event.target.parentNode.id);
+	console.log("text?", event.target.previousSibling);
+	event.target.previousSibling.classList.remove("hidden");
 	}
 }
 

@@ -29,3 +29,22 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+.planetBox {
+	border: solid black 2px;
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+}
+
+.planetName {
+	color: white;
+	font-family: helvetica;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	margin-top: 128px;
+	width: inherit;
+}

@@ -23,7 +23,7 @@ var planets = [
 	},
 	{
 		name: "Jupiter",
-		url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjXpLXTzqLSAhUDPCYKHdKNDYIQjBwIBA&url=https%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa010000%2Fa012000%2Fa012021%2FJupiterThumbnailSmall.png&psig=AFQjCNGae9hh-u-sAmOzCAFtaowYmulJPA&ust=1487815462167248"
+		url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Hubble_Captures_Vivid_Auroras_in_Jupiter's_Atmosphere.jpg/220px-Hubble_Captures_Vivid_Auroras_in_Jupiter's_Atmosphere.jpg"
 	},
 	{
 		name: "Neptune",
@@ -45,6 +45,7 @@ function getPlanets(){
 		var newPlanet = "";
 		newPlanet += `<div class="planetBox" id="planetBox-${i}">`;
 		newPlanet += `<div class="planetName"> ${planets[i].name}  </div>`;
+		newPlanet+= `<img class="planetImage" src="${planets[i].url}">`;
 		newPlanet += `</div>`;
 		planetHolderDiv.innerHTML += newPlanet;
 	}

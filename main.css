@@ -48,3 +48,8 @@
 	margin-top: 128px;
 	width: inherit;
 }
+
+.planetImage {
+	width: 300px;
+	height: 300px;
+}
